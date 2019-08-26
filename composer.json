@@ -1,0 +1,63 @@
+{
+    "name": "shopware/production",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "custom/plugins/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "platform",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/core",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/administration",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/storefront",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Shopware\\Production\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": "v6.0.0+ea1.1@dev",
+        "shopware/storefront": "v6.0.0+ea1.1@dev",
+        "shopware/administration": "v6.0.0+ea1.1@dev",
+
+        "symfony/console": "4.3.2",
+        "symfony/process": "4.3.2",
+        "symfony/dotenv": "4.3.2",
+
+        "ocramius/package-versions": "1.4.0"
+    }
+}
